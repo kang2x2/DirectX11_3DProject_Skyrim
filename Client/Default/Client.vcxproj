@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b2adce8f-bf4c-4b2e-8894-edbd6ee10c82}</ProjectGuid>
+    <RootNamespace>Client</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>true</EnableUnitySupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>true</EnableUnitySupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\Bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../Reference/Header;../Public;../Default;../IMGUI;../../Fmod/inc/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../Reference/Library/;../../Fmod/lib/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;d3d11.lib;DirectXTKd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference />
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../Reference/Header;../Public;../Default;../IMGUI;../../Fmod/inc/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../Reference/Library/;../../Fmod/lib/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;d3d11.lib;DirectXTK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\IMGUI\imconfig.h" />
+    <ClInclude Include="..\IMGUI\imgui.h" />
+    <ClInclude Include="..\IMGUI\imgui_impl_dx11.h" />
+    <ClInclude Include="..\IMGUI\imgui_impl_win32.h" />
+    <ClInclude Include="..\IMGUI\imgui_internal.h" />
+    <ClInclude Include="..\IMGUI\imstb_rectpack.h" />
+    <ClInclude Include="..\IMGUI\imstb_textedit.h" />
+    <ClInclude Include="..\IMGUI\imstb_truetype.h" />
+    <ClInclude Include="..\Public\Armor_Glass.h" />
+    <ClInclude Include="..\Public\BootsF_Merchant01.h" />
+    <ClInclude Include="..\Public\BootsM_Blades.h" />
+    <ClInclude Include="..\Public\BossSpiderPart_Base.h" />
+    <ClInclude Include="..\Public\BossSpider_Left.h" />
+    <ClInclude Include="..\Public\BossSpider_Mouth.h" />
+    <ClInclude Include="..\Public\BossSpider_Right.h" />
+    <ClInclude Include="..\Public\CastleObject.h" />
+    <ClInclude Include="..\Public\Effect_BloodFlare.h" />
+    <ClInclude Include="..\Public\Effect_BloodSpot.h" />
+    <ClInclude Include="..\Public\Effect_CombatSpark.h" />
+    <ClInclude Include="..\Public\Effect_FadeBlack.h" />
+    <ClInclude Include="..\Public\Effect_IntroFade.h" />
+    <ClInclude Include="..\Public\Effect_ScreenBlur.h" />
+    <ClInclude Include="..\Public\GlovesM_Blades.h" />
+    <ClInclude Include="..\Public\GuardCaptainPart_Base.h" />
+    <ClInclude Include="..\Public\GuardCaptain_Weapon.h" />
+    <ClInclude Include="..\Public\GuardPart_Base.h" />
+    <ClInclude Include="..\Public\Guard_Weapon.h" />
+    <ClInclude Include="..\Public\HelmetM_Blades.h" />
+    <ClInclude Include="..\Public\Inventory_ItemCategory.h" />
+    <ClInclude Include="..\Public\Inventory_ItemList.h" />
+    <ClInclude Include="..\Public\Inventory_PartBase.h" />
+    <ClInclude Include="..\Public\Inventory_UnderBar.h" />
+    <ClInclude Include="..\Public\Level_Castle.h" />
+    <ClInclude Include="..\Public\LoadingObj_Falmer.h" />
+    <ClInclude Include="..\Public\LoadingObj_Skeever.h" />
+    <ClInclude Include="..\Public\Loading_Camera.h" />
+    <ClInclude Include="..\Public\Logo_Camera.h" />
+    <ClInclude Include="..\Public\NPC_Guard.h" />
+    <ClInclude Include="..\Public\NPC_GuardCaptain.h" />
+    <ClInclude Include="..\Public\NPC_GuardSupply.h" />
+    <ClInclude Include="..\Public\PlaceableObject.h" />
+    <ClInclude Include="..\Public\Player_Foot.h" />
+    <ClInclude Include="..\Public\Player_Hand.h" />
+    <ClInclude Include="..\Public\Player_Head.h" />
+    <ClInclude Include="..\Public\SceneChangeCol.h" />
+    <ClInclude Include="..\Public\SkyrimItem.h" />
+    <ClInclude Include="..\Public\SkyrimUI.h" />
+    <ClInclude Include="..\Public\SkyrimUI_BossHpBar.h" />
+    <ClInclude Include="..\Public\SkyrimUI_HpBar.h" />
+    <ClInclude Include="..\Public\SkyrimUI_MonsterHpBar.h" />
+    <ClInclude Include="..\Public\SkyrimUI_SceneChange.h" />
+    <ClInclude Include="..\Public\SkyrimUI_SpBar.h" />
+    <ClInclude Include="..\Public\SkyrimUI_Talk.h" />
+    <ClInclude Include="..\Public\SkyrimUI_TalkIcon.h" />
+    <ClInclude Include="..\Public\Skyrim_Cursor.h" />
+    <ClInclude Include="..\Public\Light_Point.h" />
+    <ClInclude Include="..\Public\SkyrimUI_Letter.h" />
+    <ClInclude Include="..\Public\Skyrim_LogoObj.h" />
+    <ClInclude Include="..\Public\Spider.h" />
+    <ClInclude Include="..\Public\SpiderPart_Base.h" />
+    <ClInclude Include="..\Public\Projectile_Web.h" />
+    <ClInclude Include="..\Public\BossSpider.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Backward.h" />
+    <ClInclude Include="..\Public\StateBossSpider_BerserkCharge.h" />
+    <ClInclude Include="..\Public\StateBossSpider_BerserkChop.h" />
+    <ClInclude Include="..\Public\StateBossSpider_BerserkSprint.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Charge.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Dead.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Groggy.h" />
+    <ClInclude Include="..\Public\StateBossSpider_GroggyIntro.h" />
+    <ClInclude Include="..\Public\StateBossSpider_GroggyOut.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Left.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Release.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Sprint.h" />
+    <ClInclude Include="..\Public\StateBossSpider_StaggerC.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Turn.h" />
+    <ClInclude Include="..\Public\StateGuardCaptain_Talk.h" />
+    <ClInclude Include="..\Public\StateGuardCaptain_UnEquip.h" />
+    <ClInclude Include="..\Public\StateGuardCaptain_Equip.h" />
+    <ClInclude Include="..\Public\StateGuardCaptain_Idle.h" />
+    <ClInclude Include="..\Public\StateGuardCaptain_UnequipWalk.h" />
+    <ClInclude Include="..\Public\StateGuardCaptain_Walk.h" />
+    <ClInclude Include="..\Public\StateGuardCaptain_Warning.h" />
+    <ClInclude Include="..\Public\StateGuardSupply_Idle.h" />
+    <ClInclude Include="..\Public\StateGuardSupply_Talk.h" />
+    <ClInclude Include="..\Public\StateManager_GuardCaptain.h" />
+    <ClInclude Include="..\Public\StateManager_GuardSupply.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_Bash.h" />
+    <ClInclude Include="..\Public\StatePlayer_1stStagger.h" />
+    <ClInclude Include="..\Public\StatePlayer_3stStagger.h" />
+    <ClInclude Include="..\Public\StateSpider_Backward.h" />
+    <ClInclude Include="..\Public\StateSpider_Dead.h" />
+    <ClInclude Include="..\Public\Spider_Mouth.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Bite.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Chase.h" />
+    <ClInclude Include="..\Public\StateBossSpider_DoubleChop.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Fall.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Idle.h" />
+    <ClInclude Include="..\Public\StateBossSpider_OneChop.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Planding.h" />
+    <ClInclude Include="..\Public\StateBossSpider_StaggerB.h" />
+    <ClInclude Include="..\Public\StateBossSpider_StaggerDC.h" />
+    <ClInclude Include="..\Public\StateBossSpider_StaggerOC.h" />
+    <ClInclude Include="..\Public\StateBossSpider_Warning.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Dead.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Dead.h" />
+    <ClInclude Include="..\Public\StateManager_BossSpider.h" />
+    <ClInclude Include="..\Public\StateManager_Spider.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_Sprint.h" />
+    <ClInclude Include="..\Public\StatePlayer_Sprint.h" />
+    <ClInclude Include="..\Public\StateSkeever_Dead.h" />
+    <ClInclude Include="..\Public\StateSpider_Bite.h" />
+    <ClInclude Include="..\Public\StateSpider_Charge.h" />
+    <ClInclude Include="..\Public\StateSpider_Chase.h" />
+    <ClInclude Include="..\Public\StateSpider_GetUp.h" />
+    <ClInclude Include="..\Public\StateSpider_Idle.h" />
+    <ClInclude Include="..\Public\StateSpider_Spit.h" />
+    <ClInclude Include="..\Public\StateSpider_StaggerB.h" />
+    <ClInclude Include="..\Public\StateSpider_StaggerC.h" />
+    <ClInclude Include="..\Public\State_BossSpider.h" />
+    <ClInclude Include="..\Public\State_GuardCaptain.h" />
+    <ClInclude Include="..\Public\State_GuardSupply.h" />
+    <ClInclude Include="..\Public\State_Npc.h" />
+    <ClInclude Include="..\Public\State_Spider.h" />
+    <ClInclude Include="..\Public\TorsoF_Merchant01.h" />
+    <ClInclude Include="..\Public\BackGround.h" />
+    <ClInclude Include="..\Public\Building.h" />
+    <ClInclude Include="..\Public\Camera_Player.h" />
+    <ClInclude Include="..\Public\CarlottaPart_Base.h" />
+    <ClInclude Include="..\Public\Carlotta_Body.h" />
+    <ClInclude Include="..\Public\Carlotta_Foot.h" />
+    <ClInclude Include="..\Public\Carlotta_Hand.h" />
+    <ClInclude Include="..\Public\Carlotta_Head.h" />
+    <ClInclude Include="..\Public\CavePillars.h" />
+    <ClInclude Include="..\Public\CLevel_Tool.h" />
+    <ClInclude Include="..\Public\Client_Defines.h" />
+    <ClInclude Include="..\Public\CaveRock.h" />
+    <ClInclude Include="..\Public\DGPlaceableObj.h" />
+    <ClInclude Include="..\Public\FalmerFence.h" />
+    <ClInclude Include="..\Public\FalmerHouse.h" />
+    <ClInclude Include="..\Public\FalmerOHPart_Base.h" />
+    <ClInclude Include="..\Public\FalmerOH_Weapon.h" />
+    <ClInclude Include="..\Public\FalmerUEPart_Base.h" />
+    <ClInclude Include="..\Public\FalmerUE_Weapon.h" />
+    <ClInclude Include="..\Public\Falmer_OneHand.h" />
+    <ClInclude Include="..\Public\Falmer_UnEquip.h" />
+    <ClInclude Include="..\Public\Inventory.h" />
+    <ClInclude Include="..\Public\Level_Dungeon.h" />
+    <ClInclude Include="..\Public\Monster.h" />
+    <ClInclude Include="..\Public\Navigation_Client.h" />
+    <ClInclude Include="..\Public\NPC_Carlotta.h" />
+    <ClInclude Include="..\Public\ParticleRect.h" />
+    <ClInclude Include="..\Public\Player_CameraPart.h" />
+    <ClInclude Include="..\Public\Player_Weapon.h" />
+    <ClInclude Include="..\Public\Skeever.h" />
+    <ClInclude Include="..\Public\SkeeverPart_Base.h" />
+    <ClInclude Include="..\Public\Skeever_Weapon.h" />
+    <ClInclude Include="..\Public\Sky.h" />
+    <ClInclude Include="..\Public\SkyrimArmor.h" />
+    <ClInclude Include="..\Public\SkyrimRock.h" />
+    <ClInclude Include="..\Public\SkyrimWeapon.h" />
+    <ClInclude Include="..\Public\Skyrim_NPC.h" />
+    <ClInclude Include="..\Public\SpiderEgg.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Attack.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Attack2.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Charge.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Chase.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Detection.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Equip.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_StaggerH.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_StaggerH2.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Idle.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_PAttack.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Return.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_StaggerL.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_StaggerL2.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_UnEquip.h" />
+    <ClInclude Include="..\Public\StateFalmerOH_Warning.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Attack.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Attack2.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Chase.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Detection.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Return.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Charge.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Squat.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_SquatIntro.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_SquatOutro.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_StaggerH.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_StaggerL.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_StaggerL2.h" />
+    <ClInclude Include="..\Public\StateFalmerUE_Warning.h" />
+    <ClInclude Include="..\Public\StateManager_FalmerOH.h" />
+    <ClInclude Include="..\Public\StateManager_FalmerUE.h" />
+    <ClInclude Include="..\Public\StateManager_Skeever.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_Anticipate.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_Block.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_BlockHit.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_BwAttackL.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_FwAttackL.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_LwAttackL.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RwAttackL.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_BwAttackR.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_FwAttackR.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_LwAttackR.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RwAttackR.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_UnEquip.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_Equip.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_Idle.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_LAttack.h" />
+    <ClInclude Include="..\Public\ImGui_Base.h" />
+    <ClInclude Include="..\Public\ImGui_GamePlay.h" />
+    <ClInclude Include="..\Public\IMGui_Manager.h" />
+    <ClInclude Include="..\Public\ImGui_Tool.h" />
+    <ClInclude Include="..\Public\Level_WhiteRun.h" />
+    <ClInclude Include="..\Public\Level_Loading.h" />
+    <ClInclude Include="..\Public\Level_Logo.h" />
+    <ClInclude Include="..\Public\Level_Zero.h" />
+    <ClInclude Include="..\Public\Loader.h" />
+    <ClInclude Include="..\Public\MainApp.h" />
+    <ClInclude Include="..\Public\PlayerPart_Base.h" />
+    <ClInclude Include="..\Public\Player.h" />
+    <ClInclude Include="..\Public\StateManager_Player.h" />
+    <ClInclude Include="..\Public\Player_Body.h" />
+    <ClInclude Include="..\Public\SkyrimTerrain.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_PAttack.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RAttack.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RunBackward.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RunFoward.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RunLeft.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RunPAttack.h" />
+    <ClInclude Include="..\Public\StatePlayerOH_RunRight.h" />
+    <ClInclude Include="..\Public\StatePlayer_Idle.h" />
+    <ClInclude Include="..\Public\StatePlayer_RunBackward.h" />
+    <ClInclude Include="..\Public\StatePlayer_RunFoward.h" />
+    <ClInclude Include="..\Public\StatePlayer_RunLeft.h" />
+    <ClInclude Include="..\Public\StatePlayer_RunRight.h" />
+    <ClInclude Include="..\Public\StateSkeever_Attack.h" />
+    <ClInclude Include="..\Public\StateSkeever_Charge.h" />
+    <ClInclude Include="..\Public\StateSkeever_Chase.h" />
+    <ClInclude Include="..\Public\StateSkeever_Detection.h" />
+    <ClInclude Include="..\Public\StateSkeever_Idle.h" />
+    <ClInclude Include="..\Public\StateSkeever_Return.h" />
+    <ClInclude Include="..\Public\StateSkeever_Stagger.h" />
+    <ClInclude Include="..\Public\StateSkeever_Warning.h" />
+    <ClInclude Include="..\Public\State_FalmerOH.h" />
+    <ClInclude Include="..\Public\State_FalmerUE.h" />
+    <ClInclude Include="..\Public\State_Monster.h" />
+    <ClInclude Include="..\Public\State_Player.h" />
+    <ClInclude Include="..\Public\State_Skeever.h" />
+    <ClInclude Include="..\Public\StoneWork.h" />
+    <ClInclude Include="..\Public\Terrain.h" />
+    <ClInclude Include="..\Public\Terrain_Grid.h" />
+    <ClInclude Include="..\Public\Tool_Camera.h" />
+    <ClInclude Include="..\Public\TorsoM_Blades.h" />
+    <ClInclude Include="..\Public\Weapon_AkaviriSword.h" />
+    <ClInclude Include="..\Public\Weapon_FalmerAxe.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Loading_Include.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\IMGUI\imgui.cpp" />
+    <ClCompile Include="..\IMGUI\imgui_demo.cpp" />
+    <ClCompile Include="..\IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="..\IMGUI\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\IMGUI\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\IMGUI\imgui_tables.cpp" />
+    <ClCompile Include="..\IMGUI\imgui_widgets.cpp" />
+    <ClCompile Include="..\Private\Armor_Glass.cpp" />
+    <ClCompile Include="..\Private\BootsF_Merchant01.cpp" />
+    <ClCompile Include="..\Private\BootsM_Blades.cpp" />
+    <ClCompile Include="..\Private\BossSpiderPart_Base.cpp" />
+    <ClCompile Include="..\Private\BossSpider_Left.cpp" />
+    <ClCompile Include="..\Private\BossSpider_Mouth.cpp" />
+    <ClCompile Include="..\Private\BossSpider_Right.cpp" />
+    <ClCompile Include="..\Private\CastleObject.cpp" />
+    <ClCompile Include="..\Private\Effect_BloodFlare.cpp" />
+    <ClCompile Include="..\Private\Effect_BloodSpot.cpp" />
+    <ClCompile Include="..\Private\Effect_CombatSpark.cpp" />
+    <ClCompile Include="..\Private\Effect_FadeBlack.cpp" />
+    <ClCompile Include="..\Private\Effect_IntroFade.cpp" />
+    <ClCompile Include="..\Private\Effect_ScreenBlur.cpp" />
+    <ClCompile Include="..\Private\GlovesM_Blades.cpp" />
+    <ClCompile Include="..\Private\GuardCaptainPart_Base.cpp" />
+    <ClCompile Include="..\Private\GuardCaptain_Weapon.cpp" />
+    <ClCompile Include="..\Private\GuardPart_Base.cpp" />
+    <ClCompile Include="..\Private\Guard_Weapon.cpp" />
+    <ClCompile Include="..\Private\HelmetM_Blades.cpp" />
+    <ClCompile Include="..\Private\Inventory_ItemCategory.cpp" />
+    <ClCompile Include="..\Private\Inventory_ItemList.cpp" />
+    <ClCompile Include="..\Private\Inventory_PartBase.cpp" />
+    <ClCompile Include="..\Private\Inventory_UnderBar.cpp" />
+    <ClCompile Include="..\Private\Level_Castle.cpp" />
+    <ClCompile Include="..\Private\LoadingObj_Falmer.cpp" />
+    <ClCompile Include="..\Private\LoadingObj_Skeever.cpp" />
+    <ClCompile Include="..\Private\Loading_Camera.cpp" />
+    <ClCompile Include="..\Private\Logo_Camera.cpp" />
+    <ClCompile Include="..\Private\NPC_Guard.cpp" />
+    <ClCompile Include="..\Private\NPC_GuardCaptain.cpp" />
+    <ClCompile Include="..\Private\NPC_GuardSupply.cpp" />
+    <ClCompile Include="..\Private\PlaceableObject.cpp" />
+    <ClCompile Include="..\Private\Player_Foot.cpp" />
+    <ClCompile Include="..\Private\Player_Hand.cpp" />
+    <ClCompile Include="..\Private\Player_Head.cpp" />
+    <ClCompile Include="..\Private\SceneChangeCol.cpp" />
+    <ClCompile Include="..\Private\SkyrimItem.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_BossHpBar.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_HpBar.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_MonsterHpBar.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_SceneChange.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_SpBar.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_Talk.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_TalkIcon.cpp" />
+    <ClCompile Include="..\Private\Skyrim_Cursor.cpp" />
+    <ClCompile Include="..\Private\Light_Point.cpp" />
+    <ClCompile Include="..\Private\SkyrimUI_Letter.cpp" />
+    <ClCompile Include="..\Private\Skyrim_LogoObj.cpp" />
+    <ClCompile Include="..\Private\Spider.cpp" />
+    <ClCompile Include="..\Private\SpiderPart_Base.cpp" />
+    <ClCompile Include="..\Private\Projectile_Web.cpp" />
+    <ClCompile Include="..\Private\BossSpider.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Backward.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_BerserkCharge.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_BerserkChop.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_BerserkSprint.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Charge.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Dead.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Groggy.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_GroggyIntro.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_GroggyOut.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Left.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Release.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Sprint.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_StaggerC.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Turn.cpp" />
+    <ClCompile Include="..\Private\StateGuardCaptain_Talk.cpp" />
+    <ClCompile Include="..\Private\StateGuardCaptain_UnEquip.cpp" />
+    <ClCompile Include="..\Private\StateGuardCaptain_Equip.cpp" />
+    <ClCompile Include="..\Private\StateGuardCaptain_Idle.cpp" />
+    <ClCompile Include="..\Private\StateGuardCaptain_UnequipWalk.cpp" />
+    <ClCompile Include="..\Private\StateGuardCaptain_Walk.cpp" />
+    <ClCompile Include="..\Private\StateGuardCaptain_Warning.cpp" />
+    <ClCompile Include="..\Private\StateGuardSupply_Idle.cpp" />
+    <ClCompile Include="..\Private\StateGuardSupply_Talk.cpp" />
+    <ClCompile Include="..\Private\StateManager_GuardCaptain.cpp" />
+    <ClCompile Include="..\Private\StateManager_GuardSupply.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_Bash.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_1stStagger.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_3stStagger.cpp" />
+    <ClCompile Include="..\Private\StateSpider_Backward.cpp" />
+    <ClCompile Include="..\Private\StateSpider_Dead.cpp" />
+    <ClCompile Include="..\Private\Spider_Mouth.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Bite.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Chase.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_DoubleChop.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Fall.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Idle.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_OneChop.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Planding.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_StaggerB.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_StaggerDC.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_StaggerOC.cpp" />
+    <ClCompile Include="..\Private\StateBossSpider_Warning.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Dead.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Dead.cpp" />
+    <ClCompile Include="..\Private\StateManager_BossSpider.cpp" />
+    <ClCompile Include="..\Private\StateManager_Spider.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_Sprint.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_Sprint.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Dead.cpp" />
+    <ClCompile Include="..\Private\StateSpider_Bite.cpp" />
+    <ClCompile Include="..\Private\StateSpider_Charge.cpp" />
+    <ClCompile Include="..\Private\StateSpider_Chase.cpp" />
+    <ClCompile Include="..\Private\StateSpider_GetUp.cpp" />
+    <ClCompile Include="..\Private\StateSpider_Idle.cpp" />
+    <ClCompile Include="..\Private\StateSpider_Spit.cpp" />
+    <ClCompile Include="..\Private\StateSpider_StaggerB.cpp" />
+    <ClCompile Include="..\Private\StateSpider_StaggerC.cpp" />
+    <ClCompile Include="..\Private\State_BossSpider.cpp" />
+    <ClCompile Include="..\Private\State_GuardCaptain.cpp" />
+    <ClCompile Include="..\Private\State_GuardSupply.cpp" />
+    <ClCompile Include="..\Private\State_Npc.cpp" />
+    <ClCompile Include="..\Private\State_Spider.cpp" />
+    <ClCompile Include="..\Private\TorsoF_Merchant01.cpp" />
+    <ClCompile Include="..\Private\BackGround.cpp" />
+    <ClCompile Include="..\Private\Building.cpp" />
+    <ClCompile Include="..\Private\Camera_Player.cpp" />
+    <ClCompile Include="..\Private\CarlottaPart_Base.cpp" />
+    <ClCompile Include="..\Private\Carlotta_Body.cpp" />
+    <ClCompile Include="..\Private\Carlotta_Foot.cpp" />
+    <ClCompile Include="..\Private\Carlotta_Hand.cpp" />
+    <ClCompile Include="..\Private\Carlotta_Head.cpp" />
+    <ClCompile Include="..\Private\CavePillars.cpp" />
+    <ClCompile Include="..\Private\CLevel_Tool.cpp" />
+    <ClCompile Include="..\Private\CaveRock.cpp" />
+    <ClCompile Include="..\Private\DGPlaceableObj.cpp" />
+    <ClCompile Include="..\Private\FalmerFence.cpp" />
+    <ClCompile Include="..\Private\FalmerHouse.cpp" />
+    <ClCompile Include="..\Private\FalmerOHPart_Base.cpp" />
+    <ClCompile Include="..\Private\FalmerOH_Weapon.cpp" />
+    <ClCompile Include="..\Private\FalmerUEPart_Base.cpp" />
+    <ClCompile Include="..\Private\FalmerUE_Weapon.cpp" />
+    <ClCompile Include="..\Private\Falmer_OneHand.cpp" />
+    <ClCompile Include="..\Private\Falmer_UnEquip.cpp" />
+    <ClCompile Include="..\Private\Inventory.cpp" />
+    <ClCompile Include="..\Private\Level_Dungeon.cpp" />
+    <ClCompile Include="..\Private\Monster.cpp" />
+    <ClCompile Include="..\Private\Navigation_Client.cpp" />
+    <ClCompile Include="..\Private\NPC_Carlotta.cpp" />
+    <ClCompile Include="..\Private\ParticleRect.cpp" />
+    <ClCompile Include="..\Private\Player_CameraPart.cpp" />
+    <ClCompile Include="..\Private\Player_Weapon.cpp" />
+    <ClCompile Include="..\Private\Skeever.cpp" />
+    <ClCompile Include="..\Private\SkeeverPart_Base.cpp" />
+    <ClCompile Include="..\Private\Skeever_Weapon.cpp" />
+    <ClCompile Include="..\Private\Sky.cpp" />
+    <ClCompile Include="..\Private\SkyrimArmor.cpp" />
+    <ClCompile Include="..\Private\SkyrimRock.cpp" />
+    <ClCompile Include="..\Private\SkyrimWeapon.cpp" />
+    <ClCompile Include="..\Private\Skyrim_NPC.cpp" />
+    <ClCompile Include="..\Private\SpiderEgg.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Attack.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Attack2.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Charge.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Chase.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Detection.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Equip.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_StaggerH.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_StaggerH2.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Idle.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_PAttack.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Return.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_StaggerL.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_StaggerL2.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_UnEquip.cpp" />
+    <ClCompile Include="..\Private\StateFalmerOH_Warning.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Attack.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Attack2.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Chase.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Detection.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Return.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Charge.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Squat.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_SquatIntro.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_SquatOutro.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_StaggerH.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_StaggerL.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_StaggerL2.cpp" />
+    <ClCompile Include="..\Private\StateFalmerUE_Warning.cpp" />
+    <ClCompile Include="..\Private\StateManager_FalmerOH.cpp" />
+    <ClCompile Include="..\Private\StateManager_FalmerUE.cpp" />
+    <ClCompile Include="..\Private\StateManager_Skeever.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_Anticipate.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_Block.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_BlockHit.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_BwAttackL.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_FwAttackL.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_LwAttackL.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RwAttackL.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_BwAttackR.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_FwAttackR.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_LwAttackR.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RwAttackR.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_UnEquip.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_Equip.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_Idle.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_LAttack.cpp" />
+    <ClCompile Include="..\Private\ImGui_Base.cpp" />
+    <ClCompile Include="..\Private\ImGui_GamePlay.cpp" />
+    <ClCompile Include="..\Private\IMGui_Manager.cpp" />
+    <ClCompile Include="..\Private\ImGui_Tool.cpp" />
+    <ClCompile Include="..\Private\Level_WhiteRun.cpp" />
+    <ClCompile Include="..\Private\Level_Loading.cpp" />
+    <ClCompile Include="..\Private\Level_Logo.cpp" />
+    <ClCompile Include="..\Private\Level_Zero.cpp" />
+    <ClCompile Include="..\Private\Loader.cpp" />
+    <ClCompile Include="..\Private\MainApp.cpp" />
+    <ClCompile Include="..\Private\PlayerPart_Base.cpp" />
+    <ClCompile Include="..\Private\Player.cpp" />
+    <ClCompile Include="..\Private\StateManager_Player.cpp" />
+    <ClCompile Include="..\Private\Player_Body.cpp" />
+    <ClCompile Include="..\Private\SkyrimTerrain.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_PAttack.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RAttack.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RunBackward.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RunFoward.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RunLeft.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RunPAttack.cpp" />
+    <ClCompile Include="..\Private\StatePlayerOH_RunRight.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_Idle.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_RunBackward.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_RunFoward.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_RunLeft.cpp" />
+    <ClCompile Include="..\Private\StatePlayer_RunRight.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Attack.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Charge.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Chase.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Detection.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Idle.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Return.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Stagger.cpp" />
+    <ClCompile Include="..\Private\StateSkeever_Warning.cpp" />
+    <ClCompile Include="..\Private\State_FalmerOH.cpp" />
+    <ClCompile Include="..\Private\State_FalmerUE.cpp" />
+    <ClCompile Include="..\Private\State_Monster.cpp" />
+    <ClCompile Include="..\Private\State_Player.cpp" />
+    <ClCompile Include="..\Private\State_Skeever.cpp" />
+    <ClCompile Include="..\Private\StoneWork.cpp" />
+    <ClCompile Include="..\Private\Terrain.cpp" />
+    <ClCompile Include="..\Private\Terrain_Grid.cpp" />
+    <ClCompile Include="..\Private\Tool_Camera.cpp" />
+    <ClCompile Include="..\Private\TorsoM_Blades.cpp" />
+    <ClCompile Include="..\Private\Weapon_AkaviriSword.cpp" />
+    <ClCompile Include="..\Private\Weapon_FalmerAxe.cpp" />
+    <ClCompile Include="Client.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Client.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\ShaderFile\Shader_Effect.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFile\Shader_Rect_Instance.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFile\Shader_VtxAnimMesh.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFile\Shader_VtxCube.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFile\Shader_VtxNonAnimMesh.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFile\Shader_VtxNorTex.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFile\Shader_VtxPosCol.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFile\Shader_VtxPosTex.hlsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
